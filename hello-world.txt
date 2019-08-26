@@ -1,0 +1,24 @@
+using System;
+using System.Linq;
+					
+public class Program
+{
+	public static void Main()
+	{	
+        for(int i = 0; i < 10; i++)
+		{
+			Console.WriteLine("Hello, world! [position: " + i + "]");
+		}
+            
+		while(true)
+		{
+            string input = Console.ReadLine();
+			if (input == "q") break;
+			
+            string result = String.Concat(input.Select(x => ((int)x).ToString("x")));
+            Console.WriteLine(result);
+		}
+		
+		Console.WriteLine("See ya!");
+	}
+}
